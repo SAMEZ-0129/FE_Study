@@ -76,3 +76,89 @@ Key:Value 형태로 저장하는 데이터의 집합체
 ### Array (배열 데이터)
 ![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/3f9181f0-c9a1-4517-a7b1-c163de74d9fe)
 
+## 변수
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/579298af-099e-4427-9c07-d05b02c77a15)
+
+var는 최근에 잘 사용하지 않는 것이 권장사항.
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/ec579e59-422a-47ac-b066-de691e5439de)
+
+변수를 선언하고 언제든 해당 변수명을 통해 데이터를 재사용할 수 있다.
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/0c75ee62-83bb-4607-b2f7-6852bd367f20)
+
+한번 선언한 변수를 새로운 값으로 재할당 수 있다.
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/18f2d5dd-4d97-46b5-86a6-3445c4684a10)
+
+const를 사용할 경우 변수에 재할당할 수 없다. 
+
+대부분의 상황에서 const를 사용하고, 변수에 재할당이 필요한 상황이 생기면 const를 let으로 변경하는 작업을 진행한다.
+
+## 예약어
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/832acab0-f98f-4204-a3fa-83e3c10f149f)
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/ba6fca33-38fd-4dba-8a60-31ea7ad568e3)
+
+이미 기본적으로 사용되는 단어들은 변수로 지정할 수 없음. 
+
+## 함수
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/cac2ed6b-01ba-4603-acc0-66d7a53a8cb4)
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/65122d29-be6a-4775-86bc-17cb1acf9379)
+
+function 을 통해 함수를 선언할 수 있음. **명령들을 감싸는 하나의 집합**
+
+함수 안에는 해당 함수를 실행할 때 작업하고 싶은 명령을 코드로 작성한다 ( 대괄호 안에 )
+
+직접 해보기:
+```
+function test_Drive() {
+    console.log('js is so fun');
+    let a = 10;
+    let b = 12;
+    return a+b;
+};
+let result = test_Drive();
+
+console.log(result);
+```
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/29addec6-3e3d-4880-8977-423a255a6ea2)
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/9537772c-f0d5-451d-9ce4-655a7ddb1fa7)
+
+함수를 선언할 때, 소괄호 안에 지정된 매개변수는 외부로부터 값을 전달받아 함수 내부에서 사용할 수 있게 해준다. (함수 내부에서만 사용 가능)
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/dbbd7c22-0fd6-4820-98d8-f45449a42c91)
+
+함수에 이름을 지정하지 않을 수도 있다. 
+
+이름을 직접 명시하는 것은 '함수 선언', 이름이 없는 경우 '함수 표현' 라고 말한다.
+
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/3f3eff84-6bb5-4777-8e50-a2c278471cdc)
+
+함수 안에 name, age같은 속성이 있음. getName처럼 속성에 함수가 사용될 경우 해당 데이터는 속성이 아닌 메소드 라고 부른다.
+
+직접 해보기:
+```
+const getName = {
+    name:'MKG',
+    age:25,
+    yourname:function() {
+        return this.name;
+    }
+};
+
+const whatisname = getName.yourname();
+console.log(whatisname);
+
+console.log(getName.yourname());
+```
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/a0a6b3ff-db93-4cdc-89ab-a3ca8ce617e1)
+
+## 조건문
+![image](https://github.com/SAMEZ-0129/FE_Study/assets/81644075/b498e632-323b-43ec-8e2c-bc5a4fe23c6a)
+
+if문: 소괄호 안에 조건을 작성하고, 참일 경우 대괄호 안에 작성한 코드를 실행한다. 거짓일 경우 무시하고 넘어간다.
+
+else문: if문에서 거짓으로 판단되어 넘어갈 경우 실행되는 부분. (참일 경우 else 내부 코드는 실행되지 않는다)
